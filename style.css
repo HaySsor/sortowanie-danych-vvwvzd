@@ -1,0 +1,25 @@
+.animaton-entry-bottom {
+  animation: entryBottom 1s ease-in-out 0s;
+}
+.animaton-entry-top {
+  animation: entrytop 1s ease-in-out 0s;
+}
+
+@keyframes entryBottom {
+  0% {
+    transform: translateY(20rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes entrytop {
+  0% {
+    transform: translateY(-20rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
