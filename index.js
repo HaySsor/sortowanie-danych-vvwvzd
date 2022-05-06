@@ -13,7 +13,7 @@ const sortList = (module) => {
   return sortedRow;
 };
 
-function timeCalculate(module) {
+function calculateTitme(module) {
   module.forEach((time) => {
     const allTimeInSec = parseInt(time.lastElementChild.textContent);
     const timeInHouer = Math.floor(allTimeInSec / 3600);
@@ -69,9 +69,7 @@ function updateDown(tableRow) {
   });
 }
 
-
-timeCalculate(tableRow);
-button.addEventListener('click', () => {
+function changeIcon(){
   const icon = document.querySelector('[data-icon]');
 
   if (icon.matches('.fa-caret-down')) {
@@ -85,4 +83,8 @@ button.addEventListener('click', () => {
     animateEntryTop(tableRow);
     updateDown(tableRow);
   }
-});
+}
+
+
+calculateTitme(tableRow);
+button.addEventListener('click', changeIcon);
